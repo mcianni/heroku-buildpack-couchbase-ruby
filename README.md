@@ -7,7 +7,7 @@ It is based on the [Heroku Ruby Couchbase buildpack](https://github.com/davidjri
 
 ### Create App
 
-    heroku create --stack cedar --buildpack https://github.com/kurobase/heroku-buildpack-couchbase-ruby.git
+    heroku create myapp --buildpack https://github.com/kurobase/heroku-buildpack-couchbase-ruby.git
     git push heroku master
     ...
     -----> Heroku receiving push
@@ -21,8 +21,8 @@ It is based on the [Heroku Ruby Couchbase buildpack](https://github.com/davidjri
 
 ### Update Buildpack
 
-    heroku config:set BUILDPACK_URL=https://github.com/kurobase/heroku-buildpack-couchbase-ruby.git
-    Setting config vars and restarting heroku-app... done, v12
+    heroku config:set BUILDPACK_URL=https://github.com/kurobase/heroku-buildpack-couchbase-ruby.git -a myapp
+    Setting config vars and restarting myapp... done, v12
     BUILDPACK_URL: https://github.com/kurobase/heroku-buildpack-couchbase-ruby.git
 
 
