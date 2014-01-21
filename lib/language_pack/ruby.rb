@@ -434,6 +434,8 @@ WARNING
     FileUtils.mkdir_p bin_dir
     Dir.chdir(bin_dir) do |dir|
       run("curl #{COUCHBASE_VENDOR_URL} -s -o - | tar xzf -")
+    end
+  end
 
   def load_default_cache?
     new_app? && ruby_version.default?
@@ -567,8 +569,6 @@ WARNING
           puts "Bundler Output: #{bundler_output}"
           if bundler_output.match(/An error occurred while installing sqlite3/)
             error_message += <<ERROR
-
-
 Detected sqlite3 gem which is not supported on Heroku.
 https://devcenter.heroku.com/articles/sqlite3
 ERROR
